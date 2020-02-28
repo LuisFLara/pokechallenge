@@ -16,14 +16,13 @@ class PokemonContainer extends React.Component {
   }
 
   getPokemon() {
-    Pokemon.getPokemon(window.location.search.substring(39, window.location.search.length-1)).then((response) => {
+    Pokemon.getPokemon(window.location.pathname.substring(9, window.location.pathname.length-1)).then((response) => {
       this.setState({ pokemon: response.data });
     }).catch((error) => alert(error));
   }
 
   render() {
     const pokemon = this.state.pokemon;
-    console.log(pokemon)
     return (
       <div>
         <h1>#{pokemon.id} - {pokemon.name}</h1>

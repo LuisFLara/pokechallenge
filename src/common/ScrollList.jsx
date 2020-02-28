@@ -48,7 +48,7 @@ class ScrollList extends React.Component {
     return (
       <Switch>
         <Route path={'/:pokemonId'}>
-          <PokemonContainer/>
+          <PokemonContainer />
         </Route>
         <Route path='/'>
           <div className="App">
