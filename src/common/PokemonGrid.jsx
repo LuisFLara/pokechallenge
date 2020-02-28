@@ -13,9 +13,9 @@ const PokemonGrid = (props) => {
   return props.pokemonList.map((i, id) =>{
     const pokemonId= getIdFromUrl(i.url);
     return(
-     <div className="card col-3 d-flex">
+     <div className="card col-3 d-flex" key={id}>
        <div className="card-body">
-         <Link to={`/pokemon/${pokemonId}/`} className="text-info card-text" ><p id={id}>{pokemonId} - {i.name}</p></Link>
+         <Link to={`/pokemon/${pokemonId}/`} className="text-info card-text"><p>{pokemonId} - {i.name}</p></Link>
        </div>
      </div>
    );
